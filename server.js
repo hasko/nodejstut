@@ -1,5 +1,7 @@
 const http = require("http");
 
+function start() {
+    
 function onRequest(request, response) {
     response.writeHead(200, {"Content-Type": "text/plain"});
     response.write("Hello World!");
@@ -7,3 +9,7 @@ function onRequest(request, response) {
 }
 
 http.createServer(onRequest).listen(process.env.PORT);
+
+}
+
+exports.start = start;
